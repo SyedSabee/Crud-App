@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Crud App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This CRUD (Create, Read, Update, Delete) application is built with React.js for the frontend and Express.js with MongoDB for the backend. It allows users to manage categories by performing CRUD operations.
 
-## Available Scripts
+## Frontend
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+1. **Category List:** Displays a list of categories fetched from the backend. Each category item includes three buttons: Detail, Edit, and Delete.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - **Detail Button:** Shows detailed information about the selected category, including its image and name.
+  - **Edit Button:** Allows users to edit the name and image of the category.
+  - **Delete Button:** Deletes the category from the backend data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Add New Category:** Enables users to add a new category by providing a name and image. The added category is then displayed in the Category List component.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - **React.js:** A JavaScript library for building user interfaces.
+  - **Axios: A** promise-based HTTP client for making requests to the backend API.
 
-### `npm run build`
+## Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - **GET /categories:** Retrieves a list of categories from the backend.
+  - **POST /categories:** Adds a new category to the backend data.
+  - **PUT /categories/:id:** Updates an existing category with the specified ID.
+  - **DELETE /categories/:id:** Deletes the category with the specified ID from the backend data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Image Storage
 
-### `npm run eject`
+  - Images for categories are stored using Cloudinary, a cloud-based image management solution.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```bash
+   git clone [repository_url]
+2. Install frontend dependencies:
+   ```bash
+   cd frontend
+    npm install
+3. Install backend dependencies:
+   ```bash
+   cd backend
+    npm install
+4. Set up environment variables:
+Create a `.env` file in the backend directory and add the following variables:
+    ```bash
+    PORT=5000
+    MONGODB_URI=your_mongodb_uri
+    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+    CLOUDINARY_API_KEY=your_cloudinary_api_key
+    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+    
+Replace `your_mongodb_uri`, `your_cloudinary_cloud_name`, `your_cloudinary_api_key`, and `your_cloudinary_api_secret` with your actual MongoDB URI and Cloudinary credentials.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Start the backend server:
+   ```bash
+   cd backend
+    npm start
+2. Start the frontend development server:
+   ```bash
+   cd frontend
+    npm start
+3. Access the application in your browser at `http://localhost:3000`.
 
-## Learn More
+# Project Video
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://github.com/SyedSabee/Crud-App/assets/145167243/a2a8fac0-3ec3-44c2-870a-4f77d217701c
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
