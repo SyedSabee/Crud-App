@@ -1,7 +1,7 @@
 # Crud App
 
 This CRUD (Create, Read, Update, Delete) application is built with React.js for the frontend and Express.js with MongoDB for the backend. It allows users to manage categories by performing CRUD operations.
-
+ 
 ## Frontend
 
 ## Components
